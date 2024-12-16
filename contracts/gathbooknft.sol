@@ -111,12 +111,12 @@ contract BookNFT is ERC721, Ownable {
         emit NFTDonated(bookId, msg.sender, to);
     }
 
-    function setResalePrice(uint256 tokenId, uint256 price) external {
-        require(_isApprovedOrOwner(msg.sender, tokenId), "Not the owner or approved");
-        require(books[tokenId].ownedNFTs[msg.sender] > 0, "You don't own this NFT");
+    function setResalePrice(uint256 bookId, uint256 price) external {
+        require(_isApprovedOrOwner(msg.sender, bookId), "Not the owner or approved");
+        require(books[bookId].ownedNFTs[msg.sender] > 0, "You don't own this NFT");
 
-        books[tokenId].resalePrices[msg.sender] = price;
-        emit ResalePriceSet(tokenId, msg.sender, price);
+        books[bookId].resalePrices[msg.sender] = price;
+        emit ResalePriceSet(bookId, msg.sender, price);
     }
 
     function cancelResalePrice(uint256 bookId) external {
