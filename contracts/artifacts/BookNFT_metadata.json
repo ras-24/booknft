@@ -712,7 +712,7 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "bookId",
+						"name": "tokenId",
 						"type": "uint256"
 					},
 					{
@@ -909,11 +909,11 @@
 	},
 	"sources": {
 		"contracts/gathbooknft.sol": {
-			"keccak256": "0x61b4425f2d4dbf09c97212b81d2fb5730ff85f963b102f2416283da67866507b",
+			"keccak256": "0x367b87ddab02491db69772392d73550f0d5c42b9c972cab600024b4d744941b2",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5e87a9099419659ab3718deab6201147d3b679cba215d7da7aaca9d82fed2e39",
-				"dweb:/ipfs/QmPGr7GuhKcYPvqLAxV2rbQRDvkHMVVfFSsn61RDVFTaQR"
+				"bzz-raw://9007200a793c28dffd573de6c422e614245f22fd7dd479caeefe8d4d1fe87d69",
+				"dweb:/ipfs/Qmeu55wVqXhxbcy2Z3Qciy41hVA3jR6AGbAhTNAPAthSYv"
 			]
 		},
 		"https://raw.githubusercontent.com/OpenZeppelin/openzeppelin-contracts/v4.3.2/contracts/access/Ownable.sol": {
