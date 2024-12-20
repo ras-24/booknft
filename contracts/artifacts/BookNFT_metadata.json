@@ -557,19 +557,6 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "getBookIds",
-				"outputs": [
-					{
-						"internalType": "uint256[]",
-						"name": "",
-						"type": "uint256[]"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -1001,11 +988,11 @@
 	},
 	"sources": {
 		"contracts/gathbooknft.sol": {
-			"keccak256": "0x895f13e086f113c6a5c4c7b5426235d1bdbd398694c19bb34ef9a13ca41ff640",
+			"keccak256": "0xdd78138d3513ded5ae90a1510b23b765885b60e3757288f665c00014a895d8b3",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0527dfc84b603ee4545a50be28f784d465c26f465347e9132e1a08257ea42eee",
-				"dweb:/ipfs/QmVwkb1y2xKwiHvCW2UjNiDNDrncNCiAuPJ7w47hk1aoMh"
+				"bzz-raw://dd1a330048da03ede49a3f828593ece5e5cfc12181583021f4d26d8f873e99b9",
+				"dweb:/ipfs/QmfJwPSbJD4qCxWoTYpyh3phjzR5n9575UsVxtz8tw8oJd"
 			]
 		},
 		"https://raw.githubusercontent.com/OpenZeppelin/openzeppelin-contracts/v4.3.2/contracts/access/Ownable.sol": {
