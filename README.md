@@ -15,6 +15,7 @@ Book NFT Marketplace ERC-721
 10. **Get Unique Owners** -> Counting Unique Owners.
 11. **Approve** -> Ownership Validation.
 12. **Withdraw** -> Withdrawing Funds.
+13. **Get All Books** -> Retrieving All Books Info.
 
 ### Prerequisites
 1. This project runs on [Remix IDE](https://remix.ethereum.org).
