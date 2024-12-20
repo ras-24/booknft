@@ -190,9 +190,4 @@ contract BookNFT is ERC721, Ownable {
         }
         return allBooks;
     }
-
-    function getBookIds() public view returns (uint256[] memory) {
-        return bookIds;
-    }
-
 }
