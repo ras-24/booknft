@@ -19,8 +19,21 @@ contract BookNFT is ERC721, Ownable {
         mapping(address => uint256) resalePrices; 
     }
 
+    struct BookInfo {
+        uint256 id;
+        string name;
+        string author;
+        address authorAddress;
+        uint256 totalSupply;
+        uint256 price;
+        uint256 initialRoyalty;
+        uint256 resaleRoyalty;
+        uint256 transactionCount;
+    }
+
     mapping(uint256 => Book) public books;
     mapping(uint256 => address[]) public bookOwners;
+    uint256[] public bookIds;
 
     event BookCreated(uint256 indexed id, string name, string author, address indexed authorAddress, uint256 totalSupply, uint256 price, uint256 initialRoyalty, uint256 resaleRoyalty);
     event NFTBought(uint256 indexed id, address indexed buyer);
@@ -53,6 +66,8 @@ contract BookNFT is ERC721, Ownable {
         newBook.initialRoyalty = initialRoyalty; 
         newBook.resaleRoyalty = resaleRoyalty; 
         newBook.transactionCount = 0;
+
+        bookIds.push(bookId);
 
         emit BookCreated(bookId, name, author, authorAddress, totalSupply, price, initialRoyalty, resaleRoyalty); 
     }
@@ -156,4 +171,28 @@ contract BookNFT is ERC721, Ownable {
         require(balance > 0, "No funds to withdraw");
         payable(owner()).transfer(balance);
     }
+
+    function getAllBooks() public view returns (BookInfo[] memory) {
+        BookInfo[] memory allBooks = new BookInfo[](bookIds.length);
+        for (uint256 i = 0; i < bookIds.length; i++) {
+            Book storage book = books[bookIds[i]];
+            allBooks[i] = BookInfo({
+                id: book.id,
+                name: book.name,
+                author: book.author,
+                authorAddress: book.authorAddress,
+                totalSupply: book.totalSupply,
+                price: book.price,
+                initialRoyalty: book.initialRoyalty,
+                resaleRoyalty: book.resaleRoyalty,
+                transactionCount: book.transactionCount
+            });
+        }
+        return allBooks;
+    }
+
+    function getBookIds() public view returns (uint256[] memory) {
+        return bookIds;
+    }
+
 }

@@ -271,6 +271,25 @@
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
+					}
+				],
+				"name": "bookIds",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					},
 					{
 						"internalType": "uint256",
@@ -459,6 +478,66 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "getAllBooks",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "author",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "authorAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "totalSupply",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "price",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "initialRoyalty",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "resaleRoyalty",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "transactionCount",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BookNFT.BookInfo[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -472,6 +551,19 @@
 						"internalType": "address",
 						"name": "",
 						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getBookIds",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
 					}
 				],
 				"stateMutability": "view",
@@ -909,11 +1001,11 @@
 	},
 	"sources": {
 		"contracts/gathbooknft.sol": {
-			"keccak256": "0x61b4425f2d4dbf09c97212b81d2fb5730ff85f963b102f2416283da67866507b",
+			"keccak256": "0x895f13e086f113c6a5c4c7b5426235d1bdbd398694c19bb34ef9a13ca41ff640",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5e87a9099419659ab3718deab6201147d3b679cba215d7da7aaca9d82fed2e39",
-				"dweb:/ipfs/QmPGr7GuhKcYPvqLAxV2rbQRDvkHMVVfFSsn61RDVFTaQR"
+				"bzz-raw://0527dfc84b603ee4545a50be28f784d465c26f465347e9132e1a08257ea42eee",
+				"dweb:/ipfs/QmVwkb1y2xKwiHvCW2UjNiDNDrncNCiAuPJ7w47hk1aoMh"
 			]
 		},
 		"https://raw.githubusercontent.com/OpenZeppelin/openzeppelin-contracts/v4.3.2/contracts/access/Ownable.sol": {
